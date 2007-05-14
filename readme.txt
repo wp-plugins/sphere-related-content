@@ -2,7 +2,7 @@
 Tags: Related Content, Sphere, SphereIt Widget
 Contributors: Watershed Studio LLC, Matthias Bauer
 
-The Sphere Related Content plug-in displays an icon link at the end of your blog posts. When a reader clicks on the icon link, we find blog and media articles related to your blog posts. See it in action on over 1 billion article pages on popular blogs and media sites like the New York Times and GigaOm.  The Sphere Related Content plug-in works best on topics that are being actively discussed in the blogosphere and news media. If you're one of those truly eccentric bloggers, well, proceed with caution :)
+The Sphere Related Content plug-in displays an icon link at the end of your blog posts. When a reader clicks on the icon link, Sphere finds blog posts and media articles related to your content. See it in action on over 1 billion article pages on popular blogs and media sites like the WSJ, New York Times, All Things D and TechCrunch. Our plug-in works best on English language blog posts and topics that are being actively discussed in the blogosphere. If you're one of those truly eccentric bloggers, well, proceed with caution :)
 
 == Installation ==
 
