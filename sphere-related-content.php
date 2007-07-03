@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Sphere Related Content Widget
+Plugin Name: Sphere Related Content
 Plugin URI: http://www.sphere.com/tools#wpwidget
-Description: Automatically show related blog posts and news articles from Sphere -- thanks to <a href="http://moeffju.net">Matthias Bauer</a> for the thresholding and other ideas incorporated in this version. 
+Description: Automatically show related blog posts and news articles from Sphere.  NEW in this version, for political bloggers, you can now select from several plug-in types, see the <a href="plugins.php?page=sphere-related-content.php">Sphere Configuration Page</a> for details.  More plug-in types for politics and other categories coming soon.
 Author: Watershed Studio, LLC 
 Author URI: http://watershedstudio.com/portfolio/software/sphereit-contextual-widget.html
-Version: 1.2 
+Version: 1.3
 */
 
 /*  Copyright 2007 Sphere (email : plugins@sphere.com)
@@ -68,7 +68,7 @@ A.iconsphere {
 }
 </style>
 
-<script type="text/javascript" src="http://www.sphere.com/widgets/sphereit/js?siteid=wordpressorg"></script>
+<script type="text/javascript" src="http://www.sphere.com/widgets/sphereit/js?t='.get_sphere_rc_wtype().'&p=wordpressorg"></script>
 ';
 
 }
@@ -153,4 +153,61 @@ add_action('the_content','sphere_content');
 
 add_action('wp_head', 'sphere_header');
 
+add_action('admin_menu', 'sphere_rc_config_page');
+
+/* === admin panel below here === */
+
+function get_sphere_rc_wtype()
+{
+	$wtype = get_option('sphere_rc_wtype');
+	if (!$wtype) { $wtype = "wordpressorg"; }
+	return $wtype;
+}
+
+function sphere_rc_config_page() {
+        global $wpdb;
+        if ( function_exists('add_submenu_page') )
+                add_submenu_page('plugins.php', __('Sphere Configuration'), __('Sphere Configuration'), 'manage_options', __FILE__, 'sphere_rc_conf');
+}
+
+function sphere_rc_conf() {
+		$wtype = get_sphere_rc_wtype();
+        if ( isset($_POST['src_frmsubmit']) ) {
+                if ( !current_user_can('manage_options'))
+                        die(__('Cheatin&#8217; uh?'));
+
+                $wtype = $_POST['wtype'];
+                update_option('sphere_rc_wtype', $wtype);
+        }
+?>
+<div class="wrap">
+<h2><?php _e('Sphere Related Content Configuration'); ?></h2>
+        <p>Select the type of Sphere Related Content plug-in you'd like to have on your blog.</p>
+		<p>If you blog about technology, news, gossip, sports or any other topics, stick with the CLASSIC Sphere plug-in for now 
+			(we'll add more topic-specific plug-ins soon, in a future version -- check <a target="_blank" href="http://wordpress.org/extend/plugins/sphere-related-content/">here</a> for updates). 
+			If you blog about POLITICS, you may want to consider one of our new POLITICS plug-ins. The currently available plug-ins include:
+		</p>
+		<p>
+		<ul>
+			<li>The CLASSIC plug-in -- shows related blog posts and news from a wide variety of sources, not category specific.  If in doubt, stick with this one. (You're done here, nothing to change.)</li>
+			<li>The POLITICS plug-in for <i>Democrats</i> -- shows related blog posts from Democratic and other left-leaning blogs, as well as from a variety of news sources.</li>
+			<li>The POLITICS plug-in for <i>Republicans</i> -- shows related blog posts from Rebublican and other right-leaning blogs, as well as from a variety of news sources..</li>
+			<li>The POLITICS plug-in with <i>Balance</i> -- shows related blog posts from both sides of the political divide, as well as from a variety of news sources.</li>
+		</ul>
+		</p>
+<form action="" method="post" name="sphererc_frm" id="sphere-rc-conf" style="margin: auto; width: 25em; ">
+<h3><label>I want my Sphere plug-in to be:</label></h3>
+	<p>
+	<input type="hidden" name="src_frmsubmit" value="1">
+	<select name="wtype" onchange="document.sphererc_frm.submit()">
+		<option <?php if ($wtype === "wordpressorg") echo "selected"; ?> value="wordpressorg">Classic, not category specific</option>
+		<option <?php if ($wtype === "political_dem") echo "selected"; ?> value="political_dem">Politics, Democrat/Left</option>
+		<option <?php if ($wtype === "political_rep") echo "selected"; ?> value="political_rep">Politics, Republican/Right</option>
+		<option <?php if ($wtype === "political_gen") echo "selected"; ?> value="political_gen">Politics, Balanced</option>
+	</select>	
+	</p>
+</form>
+</div>
+<?php
+}
 ?>
