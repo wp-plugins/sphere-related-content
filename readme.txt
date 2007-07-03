@@ -17,8 +17,14 @@ The Sphere Related Content plug-in displays an icon link at the end of your blog
    Now, the Sphere link will be inserted at the bottom of all posts longer than 30 words.
    For most blogs, this works just peachy and you're done.  If you're an advanced user 
    and want to customize the behavior and look/placement of the link, read on.
+
+5. You can now change the type/theme of the Sphere Related Content plugin.  In the admin, click on the
+   "Plugins" menu and then click on the "Sphere Configuration" sub-menu for details and to 
+   change your widget type.  If you're in doubt about which type to use, stick with Classic.  
+   More types coming soon.  When you change a type, reload one of your pages and click on the 
+   Sphere Related Content link to see the widget type you selected.
  
-5. The default behavior is to place the Sphere link automatically within a <span> tag
+6. The default behavior is to place the Sphere link automatically within a <span> tag
    at the end of posts that have more than a minimum length.  You can modify the plugin's
    sphere-related-content.php file to change that behavior.  There are instructions in that file,
    but here are the basics:
@@ -35,15 +41,15 @@ The Sphere Related Content plug-in displays an icon link at the end of your blog
  
    If you're not sure what to do, leave the settings below at their default value.
 
-6. You can always force a Sphere link to be inserted into a post by putting
+7. You can always force a Sphere link to be inserted into a post by putting
    `<!--sphereit-->` anywhere into the post's text.  That comment will not be displayed, but will force
    a Sphere link to be inserted for that post.
 
-7. Conversely, You can keep a Sphere link from being inserted in a post by adding 
+8. Conversely, You can keep a Sphere link from being inserted in a post by adding 
    `<!--nosphereit-->` to that post.  Again, this marker will not be displayed, but will prevent 
    a Sphere link from being shown for that post.
 
-8. If you want to override the default placement of the link, you should:
+9. If you want to override the default placement of the link, you should:
 
    i) Turn off $auto_sphereit by setting 
 
