@@ -2,7 +2,11 @@
 Tags: Related Content, Sphere, SphereIt Widget
 Contributors: Watershed Studio LLC, Matthias Bauer
 
-The Sphere Related Content plug-in displays an icon link at the end of your blog posts. When a reader clicks on the icon link, Sphere finds blog posts and media articles related to your content. See it in action on over 1 billion article pages on popular blogs and media sites like the WSJ, New York Times, All Things D and TechCrunch. Our plug-in works best on English language blog posts and topics that are being actively discussed in the blogosphere. If you're one of those truly eccentric bloggers, well, proceed with caution :) NEW FOR POLITICAL BLOGGERS - Now you can adapt your plug-in to one of these for the political season: Left, Right, Balanced ... If you're a political blogger, this is an informative and fun way to add to your site's user experience.  Just go to the "Plugins" section in your WordPress admin UI, you'll see a new section called "Sphere Configuration" after you've installed the plugin.  You'll be able to select your widget type there.  More widget types (politics and beyond) coming soon. 
+== Description ==
+
+The Sphere Related Content plug-in displays an icon link at the end of your blog posts. When a reader clicks on the icon link, Sphere finds blog posts and media articles related to your content. See it in action on over 1 billion article pages on popular media sites and blogs like the WSJ, New York Times, TechCrunch and Real Clear Politics. Our plug-in works best on English language blog posts and topics that are being actively discussed in the blogosphere.
+
+NEW FOR POLITICAL BLOGGERS - Now you can adapt your plug-in or the election campaign: Left, Right, Balanced ... If you're a political blogger, this is an informative and fun way to add to your site's user experience. Just go to the "Plugins" section in your WordPress admin UI, you'll see a new section called "Sphere Configuration" after you've installed the plugin. You'll be able to select your widget type there. More widget types (politics and beyond) coming soon.
 
 == Installation ==
 
