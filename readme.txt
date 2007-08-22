@@ -6,6 +6,8 @@ The Sphere Related Content plug-in displays an icon link at the end of your blog
 
 == Installation ==
 
+By installing the Sphere Related Content plugin you agree to the Sphere Related Content Terms of Service listed here: http://www.sphere.com/tosrc
+
 1. Copy the file sphere-related-content.php into your plugins directory (wp-content/plugins/).
 
 2. Login to your WordPress Admin Panel 
