@@ -2,7 +2,7 @@
 /*
 Plugin Name: Sphere Related Content
 Plugin URI: http://www.sphere.com/tools#wpwidget
-Description: Automatically show related blog posts and news articles from Sphere.  NEW in this version, related video for news bloggers, you can now select from several plug-in types, see the <a href="plugins.php?page=sphere-related-content.php">Sphere Configuration Page</a> for details.  More plug-in types for politics and other categories coming soon.
+Description: Automatically show related blog posts and news articles from Sphere.  NEW in this version, related video for news bloggers.  You can now select from several plug-in types, see the <a href="plugins.php?page=sphere-related-content.php">Sphere Configuration Page</a> for details.  More plug-in types for politics and other categories coming soon.
 Author: Watershed Studio, LLC 
 Author URI: http://watershedstudio.com/portfolio/software/sphereit-contextual-widget.html
 Version: 1.3
