@@ -2,7 +2,7 @@
 /*
 Plugin Name: Sphere Related Content
 Plugin URI: http://www.sphere.com/tools#wpwidget
-Description: Automatically show related blog posts and news articles from Sphere.  NEW in this version, for political bloggers, you can now select from several plug-in types, see the <a href="plugins.php?page=sphere-related-content.php">Sphere Configuration Page</a> for details.  More plug-in types for politics and other categories coming soon.
+Description: Automatically show related blog posts and news articles from Sphere.  NEW in this version, related video for news bloggers, you can now select from several plug-in types, see the <a href="plugins.php?page=sphere-related-content.php">Sphere Configuration Page</a> for details.  More plug-in types for politics and other categories coming soon.
 Author: Watershed Studio, LLC 
 Author URI: http://watershedstudio.com/portfolio/software/sphereit-contextual-widget.html
 Version: 1.3
@@ -190,6 +190,7 @@ function sphere_rc_conf() {
 		<p>
 		<ul>
 			<li>The CLASSIC plug-in -- shows related blog posts and news from a wide variety of sources, not category specific.  If in doubt, stick with this one. (You're done here, nothing to change.)</li>
+			<li>The NEWS VIDEO plug-in for news bloggers -- shows related video from mainstream news sources.</li>
 			<li>The POLITICS plug-in for <i>Democrats</i> -- shows related blog posts from Democratic and other left-leaning blogs, as well as from a variety of news sources.</li>
 			<li>The POLITICS plug-in for <i>Republicans</i> -- shows related blog posts from Rebublican and other right-leaning blogs, as well as from a variety of news sources..</li>
 			<li>The POLITICS plug-in with <i>Balance</i> -- shows related blog posts from both sides of the political divide, as well as from a variety of news sources.</li>
@@ -200,7 +201,8 @@ function sphere_rc_conf() {
 	<p>
 	<input type="hidden" name="src_frmsubmit" value="1">
 	<select name="wtype" onchange="document.sphererc_frm.submit()">
-		<option <?php if ($wtype === "wordpressorg") echo "selected"; ?> value="wordpressorg">Classic, not category specific</option>
+		<option <?php if ($wtype === "wordpressorg") echo "selected"; ?> value="wordpressorg">Classic</option>
+		<option <?php if ($wtype === "news_video") echo "selected"; ?> value="news_video">News Video</option>
 		<option <?php if ($wtype === "political_dem") echo "selected"; ?> value="political_dem">Politics, Democrat/Left</option>
 		<option <?php if ($wtype === "political_rep") echo "selected"; ?> value="political_rep">Politics, Republican/Right</option>
 		<option <?php if ($wtype === "political_gen") echo "selected"; ?> value="political_gen">Politics, Balanced</option>
