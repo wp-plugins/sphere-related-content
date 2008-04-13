@@ -190,7 +190,7 @@ function sphere_rc_conf() {
 		<p>
 		<ul>
 			<li>The CLASSIC plug-in -- shows related blog posts and news from a wide variety of sources, not category specific.  If in doubt, stick with this one. (You're done here, nothing to change.)</li>
-			<li>The NEWS VIDEO plug-in for news bloggers -- shows related video from mainstream news sources.</li>
+			<li>The NEWS VIDEO plug-in for news bloggers -- shows related video from Sphere Partners, as well as related news articles and blog posts.</li>
 			<li>The POLITICS plug-in for <i>Democrats</i> -- shows related blog posts from Democratic and other left-leaning blogs, as well as from a variety of news sources.</li>
 			<li>The POLITICS plug-in for <i>Republicans</i> -- shows related blog posts from Rebublican and other right-leaning blogs, as well as from a variety of news sources..</li>
 			<li>The POLITICS plug-in with <i>Balance</i> -- shows related blog posts from both sides of the political divide, as well as from a variety of news sources.</li>
